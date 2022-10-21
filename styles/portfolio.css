@@ -4,6 +4,17 @@
   font-family: var(--main-font);
   font-style: normal;
 }
+/* ==========FILTERS========== */
+.filters {
+  margin-top: 94px;
+}
+
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
 .filters-item {
   font-weight: 500;
   font-size: 16px;
@@ -17,6 +28,21 @@
 .filters-item:focus {
   color: var(--accent-color);
 }
+/* ==========END FILTERS========== */
+/* ==========EXAMPLES========== */
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+}
+.examples-item {
+  width: calc((100%-60px) / 3);
+}
+.examples:not(:nth-last-child(-n + 3)) {
+  padding-bottom: 30px;
+}
+.examples-content {
+  padding: 20px 24px;
+}
 .examples-title {
   font-weight: 700;
   font-size: 18px;
@@ -24,6 +50,8 @@
   letter-spacing: 0.06em;
 
   color: var(--title-text-color);
+
+  margin-bottom: 4px;
 }
 .examples-description {
   font-weight: 400;
@@ -39,3 +67,4 @@
 
   color: var(--primary-text-color);
 }
+/* ==========END EXAMPLES========== */

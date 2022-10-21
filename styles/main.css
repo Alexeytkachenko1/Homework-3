@@ -16,6 +16,21 @@
   --primary-gray-color: #afb1b8;
   --replacement-color: tomato;
 }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: #555;
+}
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
@@ -35,24 +50,65 @@ body {
 /* =============COMPONENTS============= */
 .modal-btn {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.875;
+
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
 
   color: var(--replacement-color);
+
+  padding: 10px 32px;
+  width: 200px;
+  min-height: 50px;
+  background: #2196f3;
+
+  border-radius: 4px;
 }
 /* =============END COMPONENTS============= */
 
 /* =============HEADER============= */
+.header {
+  padding: 25px;
+}
+.header .container {
+  display: flex;
+}
+
+.header .navigation-list {
+  display: flex;
+  outline: 1px solid black;
+  margin-right: 310px;
+}
+.header .navigation {
+  display: flex;
+  align-items: center;
+  outline: 1px solid black;
+}
+.header .logo {
+  margin-right: 93px;
+  outline: 1px solid black;
+}
+.header .address {
+  display: flex;
+
+  outline: 1px solid black;
+}
+
+.header .address-item + .address-item {
+  margin-left: 50px;
+}
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
 .logo {
   font-family: var(--secondary-font);
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192px;
+  font-size: 20px;
+  line-height: 1.192;
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
@@ -71,6 +127,14 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.address-item {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .header-communicate-link {
   font-weight: 500;
@@ -80,8 +144,8 @@ body {
 
   color: var(--primary-text-color);
 }
-/* .navigation-list-link:hover,
-.navigation-list-link:focus, */
+.navigation-list-link:hover,
+.navigation-list-link:focus,
 .header-communicate-link:hover,
 .header-communicate-link:focus {
   color: var(--accent-color);
@@ -92,18 +156,32 @@ body {
 /* =============END HEADER============= */
 
 /* =============HERO============= */
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.363px;
+  line-height: 1.363;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--replacement-color);
+
+  margin-top: 200px;
+  margin-bottom: 30px;
+}
+.modal-btn {
+  display: block;
+  margin: 0 auto;
 }
 /* =============END HERO============= */
 
 /* =============PECULIARITIES============= */
+
+.section-list {
+  display: flex;
+  margin-top: 94px;
+  margin-bottom: 47px;
+}
 .section-title {
   font-weight: 700;
   font-size: 14px;
@@ -122,6 +200,13 @@ body {
 /* =============END PECULIARITIES============= */
 /* =============WORKING-PROCESS============= */
 .working-process {
+  margin-top: 47px;
+  margin-bottom: 50px;
+}
+.working-process-list {
+  display: flex;
+}
+.working-process-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.166;
@@ -130,9 +215,19 @@ body {
 
   color: var(--title-text-color);
 }
+.working-process-item:not(:last-child) {
+  margin-right: 30px;
+}
 /* =============END WORKING-PROCESS============= */
 
 /* =============OUR COMMAND============= */
+.command {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+.command-list {
+  display: flex;
+}
 .command-title {
   font-weight: 700;
   font-size: 36px;
@@ -141,6 +236,15 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+
+.command-list {
+  justify-content: space-between;
+}
+.dev-list-content {
+  padding-top: 30px;
+  text-align: center;
 }
 .dev-list-name {
   font-weight: 500;
@@ -150,6 +254,7 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
+  margin-bottom: 10px;
 }
 .dev-list-position {
   font-weight: 400;
@@ -159,10 +264,20 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
+  margin-bottom: 90px;
 }
 /* =============END OUR COMMAND============= */
 
 /* =============CLIENTS============= */
+
+.clients {
+  margin-top: 54px;
+  margin-bottom: 94px;
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
 .clients-title {
   font-weight: 700;
   font-size: 36px;
@@ -170,10 +285,32 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  margin-bottom: 50px;
 }
 /* =============END CLIENTS============= */
 
 /* =============FOOTER============= */
+.footer {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+.footer .logo {
+  margin-bottom: 20px;
+}
+.join {
+  display: flex;
+}
+.join-list {
+  display: flex;
+}
+.footer .address {
+  padding-top: 20px;
+  position: absolute;
+}
 .title-adress {
   font-weight: 400;
   font-size: 14px;
@@ -192,51 +329,10 @@ body {
 .join-title {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 142;
+  line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--replacement-color);
 }
 /* =============END FOOTER============= */
-.body {
-  background-color: var(--primary-white-color);
-  color: var(--primary-text-color);
-  font-family: var(--main-font);
-  font-style: normal;
-}
-.button-item {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: var(--title-text-color);
-}
-.button-item:hover,
-.button-item:focus {
-  color: var(--accent-color);
-}
-.examples-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-
-  color: var(--title-text-color);
-}
-.examples-description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.03em;
-}
-.examples-link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.03em;
-
-  color: var(--primary-text-color);
-}
